@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120b20">
+  <title>AI Dream Play — Character Stories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="ageGate" class="age-gate">
+    <div class="age-card">
+      <div class="brand-mark">✦</div>
+      <p class="eyebrow">AI DREAM PLAY</p>
+      <h1>Enter a world of stories</h1>
+      <p>This experience is intended for adults (18+). Characters are fictional. Respectful, consensual roleplay only.</p>
+      <button id="enterBtn" class="btn primary">I am 18 or older — Enter</button>
+      <p class="tiny">If you are under 18, please leave this site.</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span><span>AI DREAM <b>PLAY</b></span></a>
+    <nav><a href="#characters">Characters</a><a href="#how">How it works</a></nav>
+    <button class="btn outline small" id="profileBtn">My Space</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">YOUR STORY. YOUR WORLD.</span>
+        <h1>Meet characters.<br><em>Create your story.</em></h1>
+        <p>Chat with fictional AI companions, explore romance and drama, and shape each story with your own prompts. Start with text; voice and video can be connected through an AI provider later.</p>
+        <div class="hero-actions"><a class="btn primary" href="#characters">Explore Characters</a><a class="btn ghost" href="#how">How it works ↗</a></div>
+        <div class="hero-stats"><div><strong>01</strong><span>Choose a character</span></div><div><strong>02</strong><span>Set the scene</span></div><div><strong>03</strong><span>Build your story</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative abstract character art">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="glass-card card-back"><span>✧</span><small>YOUR NEXT CHAPTER</small></div>
+        <div class="glass-card card-front"><div class="avatar large">♡</div><p>Every story starts<br>with a message.</p><span class="online-dot"></span><small>FICTIONAL AI COMPANION</small></div>
+      </div>
+    </section>
+
+    <section id="characters" class="section">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR VIBE</p><h2>Choose your character</h2></div><div class="filters" id="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Romance">Romance</button><button class="filter" data-filter="Drama">Drama</button><button class="filter" data-filter="Family">Family</button><button class="filter" data-filter="Mystery">Mystery</button></div></div>
+      <div id="characterGrid" class="character-grid"></div>
+    </section>
+
+    <section id="how" class="how section">
+      <div><p class="eyebrow">BUILT AROUND YOU</p><h2>One prompt can change the whole story.</h2><p>Tell your character the setting, mood, dialogue style, or next plot twist. The starter version runs a local demo reply. Connect a secure AI backend to enable real generated replies.</p></div>
+      <div class="how-points"><div><span>✧</span><div><b>Custom scenes</b><p>Choose a setting and steer the plot.</p></div></div><div><span>◉</span><div><b>Character memory</b><p>Demo chat stays in this browser session.</p></div></div><div><span>♫</span><div><b>Voice & video ready</b><p>Provider integration is a separate next step.</p></div></div></div>
+    </section>
+    <footer><a class="brand" href="#"><span class="brand-icon">✦</span><span>AI DREAM <b>PLAY</b></span></a><p>Fictional characters • 18+ experience • Respect and consent first</p><span>© 2026 AI Dream Play — Starter</span></footer>
+  </main>
+
+  <div id="chatModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+    <div class="chat-window">
+      <div class="chat-head"><div class="chat-person"><div id="chatAvatar" class="avatar">♡</div><div><h3 id="chatTitle">Character</h3><span id="chatSubtitle">Fictional AI character</span></div></div><button id="closeChat" class="icon-btn" aria-label="Close">✕</button></div>
+      <div class="chat-notice">Demo mode: replies are sample responses, not live AI. Do not share private information.</div>
+      <div id="chatMessages" class="chat-messages"><div class="bubble them">Hi! What kind of story should we create together?</div></div>
+      <div class="prompt-chips"><button data-prompt="Let's start a romantic, respectful date scene.">Romantic scene</button><button data-prompt="Let's create a dramatic family story with a twist.">Family drama</button><button data-prompt="Start a mysterious story and let me solve the case.">Mystery</button></div>
+      <form id="chatForm" class="chat-input"><input id="messageInput" maxlength="600" placeholder="Write your message or scene..." autocomplete="off" required><button class="btn primary" type="submit">Send ↗</button></form>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
